@@ -1,0 +1,45 @@
+{
+  "name": "react-mui",
+  "version": "1.0.0",
+  "description": "A MERN application with webpack and material-ui",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --open --port 9000 --host 0.0.0.0  --compress --hot",
+    "_build:dev": "webpack --mode development --progress",
+    "_build:prod": "webpack --mode production --progress",
+    "build": "npm run _build:prod",
+    "post_build:dev2": "cp public/manifest.json dist/ & cp public/images dist/ -Rf",
+    "post_build:prod": "cp public/images dist/ -Rf",
+    "serve": "serve -s dist",
+    "browserslist": "browserslist 'last 1 version, >1%' "
+  },
+  "keywords": [
+    "node",
+    "webpack",
+    "react",
+    "material-ui"
+  ],
+  "author": "Hazrat Ali <iloveyii@yahoo.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/polyfill": "^7.11.5",
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "browserslist": "^4.14.5",
+    "css-loader": "^4.3.0",
+    "html-webpack-plugin": "^4.5.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
