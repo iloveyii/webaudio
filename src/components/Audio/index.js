@@ -25,12 +25,18 @@ const styles = theme => ({
     marginTop: theme.spacing(3)
   },
   iconsLarge: {
-    height: 90,
-    width: 90
+    height: '4rem',
+    width: '4rem'
   },
   iconsStop: {
-    height: 120,
-    width: 120
+    height: '5rem',
+    width: '5rem'
+  },
+  details : {
+    minHeight: 500
+  },
+  outer: {
+    minHeight: 600
   }
 });
 
@@ -142,20 +148,19 @@ class index extends React.Component {
 
         <Paper className={classes.root} elevation={0}>
           <Card className={classes.outer} variant="outlined" raised={false}>
-            <CardMedia className={classes.cover} image={'imageUrl'} />
 
             <CardContent className={classes.details}>
               <Typography component="h5" variant="h5">
                 {this.state.timeElapsed} : {this.state.status}
               </Typography>
               
-              <audio style={{display: 'none'}} id="audio" src=""></audio> 
+                <audio style={{display: 'block'}} id="audio" src=""></audio> 
 
                 <div className="holder">
 
-                <IconButton onClick={this.onStop} className="stop" aria-label="delete">
-                    <StopOutlinedIcon color="primary" className={classes.iconsStop}/>
-                </IconButton>
+                  <IconButton onClick={this.onStop} className="stop" aria-label="delete">
+                      <StopOutlinedIcon color="primary" className={classes.iconsStop}/>
+                  </IconButton>
 
                   <div className='record'>
                     <button onClick={this.onStart} data-recording={this.state.status === statuses.RECORDING} className="round-button">Save</button>
@@ -163,7 +168,7 @@ class index extends React.Component {
 
                   <IconButton onClick={this.onPlay} className="start" aria-label="delete">
                     <PlayCircleOutlineOutlinedIcon color="secondary" className={classes.iconsLarge}/>
-                    </IconButton>
+                  </IconButton>
                 </div>
             </CardContent>
           </Card>
