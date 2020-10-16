@@ -1,12 +1,34 @@
 <!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="description" content="This is a mern web application"/><link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png"><link rel="manifest" href="/manifest.json"><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/><title>React App | Webpack | Lab 2</title><style>@media (max-width: 450px) {
-            .MuiBox-root {
-                padding-left: 0 !important;
-                padding-right: 0 !important;
-                margin-left: 0 !important;
-                margin-right: 0 !important;
+            html {
+                font-size: 8px !important;
+            }
+
+            .holder {
+                margin: 4rem 0 !important;
+            }
+        }
+
+        @media (min-width: 451px) {
+            html {
+                font-size: 10px !important;
+            }
+
+            .holder {
+                margin: 4rem 0 !important;
+            }
+        }
+
+        @media (min-width: 680px) {
+            html {
+                font-size: 14px !important;
+            }
+
+            .holder {
+                margin: 4rem !important;
             }
         }</style><style>html, body {
             height: 100% !important;
+            font-size: 12px;
         }
         body {
             display: flex !important;
@@ -27,24 +49,14 @@
         }
         .top {
             background: url('/images/bg.png') repeat-x top center;
-        }</style><style>table thead tr th {
-            text-align: center !important;
-            border: none !important;
-        }
-        table thead tr th label{
-            background-color: cadetblue;
-            padding: .5em;
-            display: block;
-            border-radius: 0 0 5px 5px;
-            font-weight: bold;
-            margin: -17px auto 0 auto;
-            color: white;
-
         }</style><style>.holder {
             display: flex;
             border: 1px solid grey;
             flex-direction: row;
             border-radius: 3px;
+            margin: 5rem;
+            justify-content: center;
+            align-items: center;
 
                 background-color: #4c474c;
                 background-image: -webkit-gradient(linear, left bottom, left top, from(#4c474c), to(#141414));
@@ -62,16 +74,16 @@
             border: none;
         }
         .round-button {
-            margin: 50px auto;
+            margin: 1rem auto;
             outline: none;
             display: block;
             border: none;
             text-indent: -1000em;
-            height: 100px;
-            width: 100px;
+            height: 5rem;
+            width: 5rem;
             border-radius: 50%;
             cursor: pointer;
-            box-shadow: 0px 5px 5px 2px rgba(0,0,0,0.3) inset, 0px 0px 0px 30px #fff, 0px 0px 0px 35px #333;
+            box-shadow: 0px .5rem .5rem .2rem rgba(0,0,0,0.3) inset, 0px 0px 0px 3rem #fff, 0px 0px 0px 5rem #333;
             background-color: rebeccapurple;
             background-image: linear-gradient(0deg, rebeccapurple 0%, black 100%);
         }
